@@ -1,8 +1,17 @@
 const express = require('express');
 const User = require('../models/UserModel');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 const router = express.Router();
+
+const authConfig = require('../config/auth.json'); 
+
+function generateToken(params = {}){
+    return jwt.sign(params, authConfig.secret, {
+        expiresIn: 86400,
+    } )   
+}
 
 router.post('/', async (req, res) => {
     const {name, email, password} = req.body;
@@ -34,7 +43,7 @@ router.get('/signin', async (req, res) => {
 
     user.password = undefined;
 
-    return res.send({user})
+    return res.send({user, token: generateToken({id: user.id})})
 })
 
 router.delete('/remove', async (req, res) =>{
