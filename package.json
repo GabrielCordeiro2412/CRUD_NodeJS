@@ -1,0 +1,30 @@
+{
+  "name": "crud_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielCordeiro2412/CRUD_NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GabrielCordeiro2412/CRUD_NodeJS/issues"
+  },
+  "homepage": "https://github.com/GabrielCordeiro2412/CRUD_NodeJS#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10",
+    "nodemon": "^2.0.15",
+    "uuidv4": "^6.2.13"
+  }
+}
