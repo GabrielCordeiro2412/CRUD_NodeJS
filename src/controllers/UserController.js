@@ -76,7 +76,6 @@ router.put('/update', async (req, res) =>{
         });
 
         return res.send({ 
-            user, 
             message: 'Usuário Alterado com sucesso!'
         })
     } catch (error) {
@@ -84,5 +83,11 @@ router.put('/update', async (req, res) =>{
     }
 
 })
+
+router.get('/all', async (req, res) =>{
+    const user = await User.find()
+    return res.send({user})
+})
+
 
 module.exports = app => app.use('/user', router);
