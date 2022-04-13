@@ -15,6 +15,14 @@ const userSchema = new mongoose.Schema({
         type: String,
         require: true,
     },
+    img_url:{
+        type: String,
+        required: false
+    },
+    img_name:{
+        type: String,
+        required: false
+    },
     createAt:{
         type: Date,
         default: Date.now
