@@ -28,3 +28,11 @@
 
 <p>3 - Agora que temos instalas as dependencias do projeto e nosso container no docker, vamos inicar a aplicação</p>
 <code>yarn dev</code>
+
+# Atualização para Upload de fotos para a AWS
+<p>Dentro dos arquivos <b>.env</b> e <b>.env-sample</b>, faça as devidas alterações com os seus dados para o correto funcionamento do projeto!</bold>
+ 
+ # Referências
+ <ul>
+   <li>https://blog.rocketseat.com.br/upload-de-imagens-no-s3-da-aws-com-node-js/</li>
+ </il>
